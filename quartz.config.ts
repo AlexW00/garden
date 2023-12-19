@@ -11,14 +11,14 @@ const config: QuartzConfig = {
     },
     baseUrl: "https://alexw00.github.io/garden",
     ignorePatterns: [
-      "private",
+      "**/private/**",
       "templates",
       ".obsidian",
       "6_PRIVATE",
       "2_ARBEIT",
-      "How to Win Friends and Influence People",
-      "MUI",
-      "Bachelor Thesis",
+      "**/How to Win Friends and Influence People/**",
+      "**/MUI/**",
+      "**/Bachelor Thesis/**",
     ],
     defaultDateType: "created",
     theme: {
