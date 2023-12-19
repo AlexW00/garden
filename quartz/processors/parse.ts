@@ -13,6 +13,7 @@ import workerpool, { Promise as WorkerPromise } from "workerpool"
 import { QuartzLogger } from "../util/log"
 import { trace } from "../util/trace"
 import { BuildCtx } from "../util/ctx"
+import fs from "fs/promises"
 
 export type QuartzProcessor = Processor<MDRoot, HTMLRoot, void>
 export function createProcessor(ctx: BuildCtx): QuartzProcessor {

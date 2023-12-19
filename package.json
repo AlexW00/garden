@@ -12,11 +12,11 @@
     "url": "https://github.com/jackyzha0/quartz.git"
   },
   "scripts": {
-    "docs": "npx quartz build --serve -d docs",
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",
-    "test": "tsx ./quartz/util/path.test.ts",
-    "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1"
+    "patch-static-css-urls": "node ./scripts/patch-static-css-urls.mjs",
+    "build": "npx quartz build && npm run patch-static-css-urls",
+    "build:gh-pages": "BASE_URL=/garden/ npm run build"
   },
   "engines": {
     "npm": ">=9.3.1",

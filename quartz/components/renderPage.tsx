@@ -196,8 +196,8 @@ export function renderPage(
       <Head {...componentData} />
       <body data-slug={slug}>
         <div class="marquee cloud">
-            <div class=""></div>
-          </div>
+          <div class=""></div>
+        </div>
         <div id="quartz-root" class="page">
           <Body {...componentData}>
             {LeftComponent}
@@ -215,16 +215,13 @@ export function renderPage(
                 </div>
               </div>
               <Content {...componentData} />
-              <div class="spacer">
-
-              </div>
+              <div class="spacer"></div>
               <div class="marquee content-footer">
                 <div></div>
               </div>
             </div>
             {RightComponent}
           </Body>
-
         </div>
       </body>
       {pageResources.js

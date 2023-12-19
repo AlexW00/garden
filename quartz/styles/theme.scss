@@ -1,0 +1,11 @@
+:root {
+  --icon-url: url("/static/icon.gif");
+  --marquee-bottom: url("/static/marquee-bottom.png");
+  --marquee-top: url("/static/marquee-top.png");
+}
+
+html[saved-theme="dark"] {
+  --icon-url: url("/static/icon-dark.gif");
+  --marquee-bottom: url("/static/marquee-bottom-dark.png");
+  --marquee-top: url("/static/marquee-top-dark.png");
+}

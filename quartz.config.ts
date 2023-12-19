@@ -9,7 +9,7 @@ const config: QuartzConfig = {
     analytics: {
       provider: "plausible",
     },
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "https://alexw00.github.io/garden",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
@@ -31,14 +31,14 @@ const config: QuartzConfig = {
         },
 
         darkMode: {
-          light: "#161618",
+          light: "#171717",
           lightgray: "#393639",
           gray: "#646464",
           darkgray: "#d4d4d4",
           dark: "#ebebec",
           secondary: "#6daa6c", // changed to a green shade
           tertiary: "#76b947", // consistent with light mode tertiary
-          highlight: "rgba(118, 185, 71, 0.15)", // green-tinted highlight
+          highlight: "#89709945", // green-tinted highlight
         },
       },
     },

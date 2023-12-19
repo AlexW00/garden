@@ -1,37 +1,38 @@
 @use "./variables.scss" as *;
 
 .page-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #page-title-icon {
-    background: none;
-	display: block;
-	align-items: center;
-	justify-content: center;
-	content: url("/static/icon.gif") !important;
-	margin-left: auto;
-	margin-right: auto;
-    width: 7.5rem;
-    height: 9rem;
-    margin: 1rem;
+  background: none;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  content: var(--icon-url);
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 7.5rem;
+  height: 9rem;
+  margin: 1rem;
 }
 
 #page-title-link {
-    white-space: nowrap;
-    font-size: 1.5rem;
+  white-space: nowrap;
+  font-size: 1.5rem;
 }
 
 #page-title-link-furi {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #page-title-link-furi > rt {
-    width: 80%;
+  width: 80%;
 }

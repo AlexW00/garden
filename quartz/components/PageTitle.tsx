@@ -9,7 +9,8 @@ function PageTitle({ fileData, cfg, displayClass }: QuartzComponentProps) {
       <div id="page-title-icon"></div>
       <a id={"page-title-link"} href={baseDir}>
         <ruby id="page-title-link-furi">
-          <rt>Alex' Garden</rt>{title}
+          <rt>Alex' Garden</rt>
+          {title}
         </ruby>
       </a>
     </h1>

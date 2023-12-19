@@ -1,28 +1,28 @@
 body {
-    // background-image: url("/static/bg.png") !important;
-    margin: 0;
-  }
-  
-  html, body, #quartz-root {
-    height: 100%;
-  }
-  
-  #quartz-body {
-    flex-grow: 1;
-    overflow-y: scroll;
-  }
-  
-  #quartz-root {
-    display: flex;
-    flex-direction: column;
-    top: 3rem;
-  }
-  
-  .content-footer {
-    margin-top: 4rem;
-  }
-  
-  .spacer {
-    flex: 1 1 auto;
-  }
+  margin: 0;
+}
 
+html,
+body,
+#quartz-root {
+  height: 100%;
+}
+
+#quartz-body {
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+
+#quartz-root {
+  display: flex;
+  flex-direction: column;
+  top: 3rem;
+}
+
+.content-footer {
+  margin-top: 4rem;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
