@@ -10,7 +10,16 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     baseUrl: "https://alexw00.github.io/garden",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: [
+      "private",
+      "templates",
+      ".obsidian",
+      "6_PRIVATE",
+      "2_ARBEIT",
+      "How to Win Friends and Influence People",
+      "MUI",
+      "Bachelor Thesis",
+    ],
     defaultDateType: "created",
     theme: {
       typography: {
