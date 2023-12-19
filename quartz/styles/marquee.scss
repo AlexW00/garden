@@ -9,9 +9,8 @@
 }
 
 .marquee div {
-  color: white;
+  background-color: var(--light);
   animation: liveTickerLoop 30s infinite linear;
-  // use baseUrl variable from variables.scss
   background-image: var(--marquee-bottom);
   height: 8rem;
   background-size: 45rem 100%;
@@ -25,13 +24,9 @@
 }
 
 .marquee.cloud div {
-  color: white;
-  animation: liveTickerLoop 30s infinite linear;
   background-image: var(--marquee-top);
   height: 3rem;
   background-size: 15rem 100%;
-  background-repeat: repeat-x;
-  width: 300%;
 }
 
 @keyframes liveTickerLoop {
