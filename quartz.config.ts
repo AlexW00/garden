@@ -47,7 +47,7 @@ const config: QuartzConfig = {
           dark: "#ebebec",
           secondary: "#6daa6c", // changed to a green shade
           tertiary: "#76b947", // consistent with light mode tertiary
-          highlight: "#89709945", // green-tinted highlight
+          highlight: "rgba(137, 112, 153, 0.25)", // green-tinted highlight
         },
       },
     },
