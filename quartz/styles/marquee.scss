@@ -1,0 +1,45 @@
+.marquee {
+    overflow: hidden;
+    width: 100%;
+    font-family: monospace;
+    white-space: nowrap;
+    height: 8rem;
+}
+  
+.marquee div {
+color: white;
+animation: liveTickerLoop 30s infinite linear;
+background-image: url("/static/marquee.png") !important;
+height: 8rem;
+background-size: 45rem 100%;
+background-repeat: repeat-x;
+width: 300%;
+}
+
+.marquee.cloud {
+height: 3rem;
+position: fixed;
+
+}
+
+.marquee.cloud div {
+color: white;
+animation: liveTickerLoop 30s infinite linear;
+background-image: url("/static/cloud.png") !important;
+height: 3rem;
+background-size: 15rem 100%;
+background-repeat: repeat-x;
+width: 300%;
+}
+  
+
+
+@keyframes liveTickerLoop {
+    from {
+      transform: translateX(0);
+    }
+  
+    to {
+      transform: translateX(-13%);
+    }
+  }
