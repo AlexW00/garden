@@ -7,7 +7,9 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: true,
     analytics: {
-      provider: "plausible",
+      provider: "ackee",
+      server: "https://ackee.weichart.de",
+      domainId: "6764ac6b-a6ef-4903-a9aa-08eb6a4661e4",
     },
     baseUrl: "https://alexw00.github.io/garden",
     ignorePatterns: [

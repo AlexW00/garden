@@ -105,6 +105,15 @@ function addGlobalPageResources(
   
       document.head.appendChild(umamiScript)
     `)
+  } else if (cfg.analytics?.provider === "ackee") {
+    componentResources.afterDOMLoaded.push(`
+      const ackeeScript = document.createElement("script");
+      ackeeScript.src = "${cfg.analytics.server}/tracker.js";
+      ackeeScript.async = true;
+      ackeeScript.setAttribute("data-ackee-server", "${cfg.analytics.server}");
+      ackeeScript.setAttribute("data-ackee-domain-id", "${cfg.analytics.domainId}");
+      document.head.appendChild(ackeeScript);
+    `)
   }
 
   if (cfg.enableSPA) {

@@ -16,6 +16,11 @@ export type Analytics =
       provider: "umami"
       websiteId: string
     }
+  | {
+      provider: "ackee"
+      server: string
+      domainId: string
+    }
 
 export interface GlobalConfiguration {
   pageTitle: string
