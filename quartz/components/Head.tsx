@@ -12,7 +12,11 @@ export default (() => {
     const path = url.pathname as FullSlug
     const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!)
 
-    const iconPath = joinSegments(baseDir, "static/icon.png")
+    const faviconIcoPath = joinSegments(baseDir, "static/favicons/favicon.ico")
+    const favicon16Path = joinSegments(baseDir, "static/favicons/favicon-16x16.png")
+    const favicon32Path = joinSegments(baseDir, "static/favicons/favicon-32x32.png")
+    const appleTouchIconPath = joinSegments(baseDir, "static/favicons/apple-touch-icon.png")
+    const manifestPath = joinSegments(baseDir, "static/favicons/site.webmanifest")
     const ogImagePath = `https://${cfg.baseUrl}/static/og-image.png`
 
     return (
@@ -25,7 +29,11 @@ export default (() => {
         {cfg.baseUrl && <meta property="og:image" content={ogImagePath} />}
         <meta property="og:width" content="1200" />
         <meta property="og:height" content="675" />
-        <link rel="icon" href={iconPath} />
+        <link rel="icon" href={faviconIcoPath} sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href={favicon32Path} />
+        <link rel="icon" type="image/png" sizes="16x16" href={favicon16Path} />
+        <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIconPath} />
+        <link rel="manifest" href={manifestPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
