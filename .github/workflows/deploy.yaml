@@ -31,7 +31,7 @@ jobs:
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          git -c http.extraHeader="AUTHORIZATION: basic $(echo -n x-access-token:${GH_PAT} | base64)" clone https://github.com/AlexW00/obs.git content
+          git -c http.extraHeader="AUTHORIZATION: basic $(echo -n x-access-token:${GH_PAT} | base64)" clone https://github.com/AlexW00/Vault content
       - name: Build Quartz
         run: npm run build
       - name: Upload artifact
