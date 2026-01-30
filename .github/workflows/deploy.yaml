@@ -36,10 +36,17 @@ jobs:
         run: rm -f .gitignore
       - name: Build Quartz
         run: npm run build
+      - name: Add CNAME and disable Jekyll
+        run: |
+            echo "alexanderweichart.de" > public/CNAME
+            touch public/.nojekyll
+            rm -f public/_config.yml
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
+
+
 
   deploy:
     needs: build
