@@ -19,6 +19,12 @@
   width: 7.5rem;
   height: 9rem;
   margin: 1rem;
+
+  @media all and (max-width: 800px) {
+    width: 6rem;
+    height: 7.5rem;
+    margin: 0.5rem;
+  }
 }
 
 #page-title-link {
@@ -33,6 +39,6 @@
   flex-direction: column;
 }
 
-#page-title-link-furi > rt {
+#page-title-link-furi>rt {
   width: 80%;
 }
