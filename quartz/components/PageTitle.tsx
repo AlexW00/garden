@@ -1,7 +1,7 @@
 import { pathToRoot } from "../util/path"
-import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
+import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
-function PageTitle({ fileData, cfg, displayClass }: QuartzComponentProps) {
+const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzComponentProps) => {
   const title = cfg?.pageTitle ?? "Untitled Quartz"
   const baseDir = pathToRoot(fileData.slug!)
   return (
