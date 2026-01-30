@@ -5,6 +5,6 @@ _content_yt
 garden
 content-full
 # note: for building, this must be disabled as quartz otherwise wont see the content
-content
+# content
 quartz/.quartz-cache
 .DS_Store
