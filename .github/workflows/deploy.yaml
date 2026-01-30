@@ -32,15 +32,8 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git -c http.extraHeader="AUTHORIZATION: basic $(echo -n x-access-token:${GH_PAT} | base64)" clone https://github.com/AlexW00/Vault content
-      - name: Remove .gitignore for build
-        run: rm -f .gitignore
       - name: Build Quartz
         run: npm run build
-      - name: Add CNAME and disable Jekyll
-        run: |
-            echo "alexanderweichart.de" > public/CNAME
-            touch public/.nojekyll
-            rm -f public/_config.yml
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
