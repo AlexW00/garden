@@ -20,9 +20,9 @@ export const sharedPageComponents: SharedLayout = {
         // from data-mapping
         mapping: 'pathname',
         // from data-strict
-        strict: false,
+        strict: true,
         // from data-reactions-enabled
-        reactionsEnabled: true,
+        reactionsEnabled: false,
         // from data-input-position
         inputPosition: 'top',
         // from data-lang
