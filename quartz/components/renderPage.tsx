@@ -287,6 +287,8 @@ export function renderPage(
               <div class="marquee content-footer">
                 <div></div>
               </div>
+            </div>
+            <div class="after-center">
               {afterBody.map((BodyComponent) => (
                 <BodyComponent {...componentData} />
               ))}

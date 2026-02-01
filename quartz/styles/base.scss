@@ -322,7 +322,12 @@ a {
       grid-area: grid-footer;
     }
 
+    & .after-center {
+      grid-area: grid-after-center;
+    }
+
     & .center,
+    & .after-center,
     & footer {
       max-width: 100%;
       min-width: 100%;
