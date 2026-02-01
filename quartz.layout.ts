@@ -24,7 +24,7 @@ export const sharedPageComponents: SharedLayout = {
         // from data-reactions-enabled
         reactionsEnabled: false,
         // from data-input-position
-        inputPosition: 'top',
+        inputPosition: 'bottom',
         // from data-lang
         lang: 'en',
         themeUrl: 'https://alexanderweichart.de/static/giscus',
