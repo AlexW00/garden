@@ -228,9 +228,25 @@ async function setupExplorer(currentSlug: FullSlug) {
         explorerContent.scrollTop = parseInt(scrollTop)
       } else {
         // try to scroll to the active element if it exists
-        const activeElement = explorerUl.querySelector(".active")
+        const activeElement = explorerUl.querySelector(".active") as HTMLElement
         if (activeElement) {
-          activeElement.scrollIntoView({ behavior: "smooth", block: "center" })
+          const activeRect = activeElement.getBoundingClientRect()
+          const contentRect = explorerContent.getBoundingClientRect()
+
+          const relativeTop = activeRect.top - contentRect.top
+          const currentScroll = explorerContent.scrollTop
+          const contentHeight = explorerContent.clientHeight
+
+          // Check if active element is visually out of view (allowing for some buffer)
+          if (relativeTop < 0 || relativeTop > contentHeight) {
+            const absoluteTop = currentScroll + relativeTop
+            const targetScroll = absoluteTop - (contentHeight / 2)
+
+            explorerContent.scrollTo({
+              top: targetScroll,
+              behavior: "smooth"
+            })
+          }
         }
       }
     }
