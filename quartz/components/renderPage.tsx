@@ -287,6 +287,9 @@ export function renderPage(
               <div class="marquee content-footer">
                 <div></div>
               </div>
+              {afterBody.map((BodyComponent) => (
+                <BodyComponent {...componentData} />
+              ))}
             </div>
             {RightComponent}
             <Footer {...componentData} />

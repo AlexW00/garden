@@ -27,6 +27,9 @@ export const sharedPageComponents: SharedLayout = {
         inputPosition: 'top',
         // from data-lang
         lang: 'en',
+        themeUrl: 'https://alexanderweichart.de/static/giscus',
+        lightTheme: 'light-theme',
+        darkTheme: 'dark-theme',
       },
     }),
   ],
