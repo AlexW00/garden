@@ -19,6 +19,7 @@ const config: QuartzConfig = {
       "6_PRIVATE",
       "6_Private",
       "0_Inbox",
+      "7_Agent/lint",
       "2_ARBEIT",
       "**/How to Win Friends and Influence People/**",
       "**/MUI/**",
