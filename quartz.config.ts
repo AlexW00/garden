@@ -18,7 +18,6 @@ const config: QuartzConfig = {
       ".obsidian",
       "6_PRIVATE",
       "6_Private",
-      "7_Agent",
       "0_Inbox",
       "2_ARBEIT",
       "**/How to Win Friends and Influence People/**",
