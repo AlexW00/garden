@@ -1,5 +1,6 @@
 import matter from "gray-matter"
 import remarkFrontmatter from "remark-frontmatter"
+import path from "path"
 import { QuartzTransformerPlugin } from "../types"
 import yaml from "js-yaml"
 import toml from "toml"
@@ -74,7 +75,15 @@ export const FrontMatter: QuartzTransformerPlugin<Partial<Options>> = (userOpts)
             if (data.title != null && data.title.toString() !== "") {
               data.title = data.title.toString()
             } else {
-              data.title = file.stem ?? i18n(cfg.configuration.locale).propertyDefaults.title
+              // For Hugo-style folder notes (_index.md and index.md), fall back to the
+              // parent folder's name so the explorer label reads "Cheatsheets" instead
+              // of "_index".
+              const stem = file.stem
+              const isFolderNote = stem === "_index" || stem === "index"
+              const parentFolder =
+                isFolderNote && file.dirname ? path.basename(file.dirname) : undefined
+              data.title =
+                parentFolder ?? stem ?? i18n(cfg.configuration.locale).propertyDefaults.title
             }
 
             const tags = coerceToArray(coalesceAliases(data, ["tags", "tag"]))
