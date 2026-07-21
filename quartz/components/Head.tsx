@@ -86,6 +86,7 @@ export default (() => {
           </>
         )}
 
+        {cfg.baseUrl && <link rel="canonical" href={socialUrl} />}
         <link rel="icon" href={faviconIcoPath} sizes="any" />
         <link rel="icon" type="image/png" sizes="32x32" href={favicon32Path} />
         <link rel="icon" type="image/png" sizes="16x16" href={favicon16Path} />
